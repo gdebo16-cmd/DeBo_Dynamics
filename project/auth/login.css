@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    background-image: url(https://images.unsplash.com/photo-1651833826115-7530e72ce504?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmxhY2slMjBtb2JpbGUlMjB3YWxscGFwZXJ8ZW58MHx8MHx8fDA%3D);
+    background-image: url('project/Assets/blackwaves.png.jpg');
     background-size: cover;
     width: 100%;
     min-width: 200px;
