@@ -9,7 +9,7 @@ loginForm.addEventListener('submit', (e) => {
 
     if (username === 'admin' && password === 'password') {
         alert('Login successful!');
-        window.open('home.html', '_self');
+        window.open('project\home\home.html', '_self');
     } else {
         alert('Invalid username or password.');
     }
