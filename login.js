@@ -9,7 +9,7 @@ loginForm.addEventListener('submit', (e) => {
 
     if (username === 'admin' && password === 'password') {
         alert('Login successful!');
-        window.open('C:\Users\gdebo\.vscode\DeBo_Dynamics\project\home\home.html', '_self');
+        window.open('home.html', '_self');
     } else {
         alert('Invalid username or password.');
     }
