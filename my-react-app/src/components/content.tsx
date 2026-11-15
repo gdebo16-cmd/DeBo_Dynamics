@@ -13,7 +13,7 @@ const Content = () => {
     ];
   return (
     <div className="content-container">
-        <LottieBackground  />
+        <LottieBackground style={{ height: '100vh', position: 'absolute', top: 0, left: 0, zIndex: -1 }} />
         <Nav />
         <div className="adapt-button-container">
         </div>

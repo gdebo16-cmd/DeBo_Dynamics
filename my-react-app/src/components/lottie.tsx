@@ -10,8 +10,8 @@ const LottieBackground: React.FC = () => {
   return (
     <div style={{ 
       width: '100%', 
-      height: '500px',       // FORCED HEIGHT FOR TESTING
-      backgroundColor: 'gray', // VISUAL AID
+      height: '100vh',
+      backgroundColor: 'transparent',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center'
