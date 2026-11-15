@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.3.0",
+    "vite-plugin-imagemin": "^0.6.1"
+  },
+  "dependencies": {
+    "lottie-react": "^3.1.2"
+  }
+}

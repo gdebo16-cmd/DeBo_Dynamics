@@ -1,0 +1,65 @@
+:root, 
+[data-theme="Light"] {
+    /* --background-image: url('./assets/background-light.png'); */
+    --border-image: url('./assets/banner-light.png');
+    --tile-1-image: url('./assets/tile-1-light.png');
+    --tile-2-image: url('./assets/tile-2-light.png');
+    --tile-3-image: url('./assets/tile-3-light.png');
+    --background-color: linear-gradient(to right, rgba(230, 230, 230, 0.607), rgba(85, 84, 84, 0.561));
+    --box-shadow: 0 4px 18px 2px rgb(0, 0, 0);
+    --color: rgb(0, 0, 0);
+    --border: rgba(100, 99, 99, 0.354);
+    --border-hover: rgba(73, 17, 17, 0.416);
+}
+
+[data-theme="Dark"] {
+    /* --background-image: url('./assets/background-dark.png'); */
+    --border-image: url('./assets/banner-dark.png');
+    --tile-1-image: url('./assets/tile-1-dark.png');
+    --tile-2-image: url('./assets/tile-2-dark.png');
+    --tile-3-image: url('./assets/tile-3-dark.png');
+    --background-color: linear-gradient(to right, rgba(88, 91, 101, 0.368), rgba(34, 39, 47, 0.483));
+    --box-shadow: 0 4px 18px 2px rgb(0, 0, 0);
+    --color: rgb(255, 255, 255);
+    --border: rgba(73, 17, 17, 0.416);
+    --border-hover: rgba(73, 17, 17, 0.416);
+}
+
+[data-theme="Forest"] {
+    /* --background-image: url('./assets/background-forest.png'); */
+    --border-image: url('./assets/banner-forest.png');
+    --tile-1-image: url('./assets/tile-1-forest.png');
+    --tile-2-image: url('./assets/tile-2-forest.png');
+    --tile-3-image: url('./assets/tile-3-forest.png');
+    --background-color: linear-gradient(to right, rgba(34, 139, 34, 0.368), rgba(34, 139, 34, 0.483));
+    --box-shadow: 0 4px 18px 2px rgb(0, 0, 0);
+    --color: rgb(255, 255, 255);
+    --border: rgba(73, 17, 17, 0.416);
+    --border-hover: rgba(73, 17, 17, 0.416);
+}
+
+[data-theme="Ocean"] {
+    /* --background-image: url('./assets/background-ocean.png'); */
+    --border-image: url('./assets/banner-ocean.mp4');
+    --tile-1-image: url('./assets/tile-1-ocean.png');
+    --tile-2-image: url('./assets/tile-2-ocean.png');
+    --tile-3-image: url('./assets/tile-3-ocean.png');
+    --background-color: linear-gradient(to right, rgba(0, 105, 148, 0.368), rgba(0, 105, 148, 0.483));
+    --box-shadow: 0 4px 18px 2px rgb(0, 0, 0);
+    --color: rgb(255, 255, 255);
+    --border: rgba(73, 17, 17, 0.416);
+    --border-hover: rgba(73, 17, 17, 0.416);
+}
+
+[data-theme="Hot"] {
+    /* --background-image: url('./assets/background-hot.png'); */
+    --border-image: url('./assets/banner-hot.png');
+    --tile-1-image: url('./assets/tile-1-hot.png');
+    --tile-2-image: url('./assets/tile-2-hot.png');
+    --tile-3-image: url('./assets/tile-3-hot.png');
+    --background-color: linear-gradient(to right, rgba(255, 69, 0, 0.368), rgba(255, 69, 0, 0.483));
+    --box-shadow: 0 4px 18px 2px rgb(0, 0, 0);
+    --color: rgb(255, 255, 255);
+    --border: rgba(73, 17, 17, 0.416);
+    --border-hover: rgba(73, 17, 17, 0.416);
+}
