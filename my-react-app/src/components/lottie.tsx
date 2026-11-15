@@ -16,8 +16,8 @@ const LottieBackground: React.FC = () => {
       alignItems: 'center',
       justifyContent: 'center'
     }}>
-      <Lottie 
-        animationData={animationData} 
+      <Lottie
+        animationData={animationData}
         loop={true}
         autoplay={true}
         style={{ width: '100%', height: '100%' }}

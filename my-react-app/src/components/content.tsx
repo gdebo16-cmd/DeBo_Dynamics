@@ -2,6 +2,7 @@ import FighterImg from '../assets/Fighter.png';
 import CyberImg from '../assets/Cyber.png';
 import ProjectsImg from '../assets/Projects.png';
 import Nav from './nav';
+import LottieBackground from './lottie';
 
 const Content = () => {
 
@@ -12,6 +13,7 @@ const Content = () => {
     ];
   return (
     <div className="content-container">
+        <LottieBackground  />
         <Nav />
         <div className="adapt-button-container">
         </div>
