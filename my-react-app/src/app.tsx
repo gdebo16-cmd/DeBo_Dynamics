@@ -1,16 +1,21 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { ThemeProvider } from './context/ThemeContext'
 import './style.css'
-import Content from './components/content'
+import Home from './components/Home'
+import Portfolio from './pages/Portfolio';
+import Resume from './pages/Resume'; 
 
 const App = () => {
 
   return (
     <ThemeProvider>
-      <body>
-        <main>
-        <Content />
-        </main>
-      </body>
+      <Router>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/resume" element={<Resume />} />
+            <Route path="/portfolio" element={<Portfolio />} />
+          </Routes>
+      </Router>
     </ThemeProvider>
   )
 }

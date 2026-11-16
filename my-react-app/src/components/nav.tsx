@@ -1,30 +1,34 @@
 import { useState } from 'react'
-import ThemeToggle from './ThemeToggle';
 
-const Nav = () => {
+import MenuButton from './lotties/MenuButton';
+
+
+
+
+interface NavProps {
+    className?: string;
+}
+
+const Nav = ({className}: NavProps) => {
     const [isOpen, setIsOpen] = useState(false)
 
     const navLinks = [
         { name: 'Home', path: '/' },
-        { name: 'About', path: '/about' },
-        { name: 'Services', path: '/services' },
-        { name: 'Settings', path: '/settings' },
+        { name: 'Resume', path: '/resume' },
+        { name: 'Portfolio', path: '/portfolio' },
 ];
   return (
-    <nav>
-      <div className="logo"></div>
-
+    <nav className={className}>
       {isOpen && (
-      <ul className="nav-links-list">
-        {navLinks.map((link) => (
-            <li className="nav-links" key={link.path}>
-              <a className="nav-link-buttons" href={link.path}>{link.name}</a>
+        <ul className="list">
+          {navLinks.map((link) => (
+            <li className="links" id={`${link.name}-link`} key={link.path}>
+              <a className="nav-buttons" href={link.path}>{link.name}</a>
             </li>
-        ))}
-        <li className="nav-links"><ThemeToggle /></li>
-      </ul>
+          ))}
+        </ul>
       )}
-      <button className="menu-button" onClick={() => setIsOpen(!isOpen)}>☰</button>
+      <MenuButton className="menu-button"onToggle={(open) => setIsOpen(open)}/>
     </nav>
   )
 }
