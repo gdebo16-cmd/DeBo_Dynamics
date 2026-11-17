@@ -15,6 +15,20 @@ html {
   background-color: var(--page-bg);
 }
 
+/* Lock the page itself in place; each page scrolls inside its own
+   container (.content-tiles, .portfolio-grid, the resume's main). */
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
+body {
+  position: fixed;
+  inset: 0;
+}
+
 main {
   height: 90dvh;
 }
@@ -174,6 +188,10 @@ footer {
   position: relative;  
   border: 2px solid var(--border);
   max-height: 85dvh;
+  overflow-y: auto;
+  scrollbar-width: none;
+  /* Don't hand leftover scroll to the (locked) page */
+  overscroll-behavior: contain;
 }
 
 .content-title {
@@ -427,7 +445,8 @@ footer {
 
   .content-title {
     position: sticky;
-    top: 0;
+    /* Stick 2px past the container's top edge so it tucks under it */
+    top: -2px;
     z-index: 10;
   }
 
