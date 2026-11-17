@@ -2,6 +2,9 @@
 
 /* Solid color behind the Lottie background. Safari tints its status bar
    and toolbar from this, so it matches the top edge of each animation. */
+/* One height for the footer bar and the banner logo that sits on it */
+:root { --footer-h: clamp(64px, 10dvh, 96px); }
+
 :root, [data-theme="Light"] { --page-bg: #8aa7ff; }
 [data-theme="Dark"]   { --page-bg: #000000; }
 [data-theme="Forest"] { --page-bg: #09051a; }
@@ -55,15 +58,18 @@ body {
 }
 
 .banner {
-  position:fixed;
-  top: 90%;
-  left: -2px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
   z-index: 1000;
+  line-height: 0; /* no gap under the inline image */
 }
 
 .banner-img {
+  display: block;
+  box-sizing: border-box;
   width: auto;
-  height: 10dvh;
+  height: var(--footer-h);
   border-radius: 0 20px 0 0;
   box-shadow: var(--box-shadow);
   border-left: none;
@@ -74,7 +80,10 @@ body {
 
 .menu-button {
   position: fixed;
-  top: 93%;
+  /* Center on the footer bar whatever the button's own height */
+  top: auto;
+  bottom: calc(var(--footer-h) / 2);
+  transform: translateY(50%);
   z-index: 1000;
   right: 10px;
   border: none;
@@ -88,7 +97,7 @@ body {
 }
 
 .menu-button:active {
-  transform: scale(0.9);
+  transform: translateY(50%) scale(0.9);
 }
 
 .list {
@@ -167,9 +176,9 @@ footer {
 }
 
 .footer-text {
-  margin-left: 40%;
+  flex: 1;
+  margin: 0 0 0 40%;
   text-align: center;
-  margin-top: 3%;
 }
 
 .content-tiles {
@@ -277,7 +286,11 @@ footer {
   backdrop-filter: blur(15px);
   color: var(--color);
   text-align: center;
-  padding: 10px 0;
+  box-sizing: border-box;
+  height: var(--footer-h);
+  padding: 0;
+  display: flex;
+  align-items: center;
   border-radius: 10px 10px 4px 4px;
 }
 
@@ -453,9 +466,9 @@ footer {
 
 
   .banner-img {
-    height: 10.2dvh;
+    height: var(--footer-h);
     position: fixed;
-    bottom: -3px;
+    bottom: 0;
     left: 0;
     width: 95%;
     border-radius: none;
@@ -466,7 +479,6 @@ footer {
 
   .menu-button {
     position: fixed;
-    bottom: 2%;
     right: 2%;
     background: none;
     z-index: 10000;
