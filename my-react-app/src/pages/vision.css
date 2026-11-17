@@ -1,0 +1,23 @@
+.vision-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60dvh;
+  padding: 0 16px;
+}
+
+.vision-headline {
+  margin: 0;
+  /* Scales from phone to desktop without overflowing */
+  font-size: clamp(4rem, 18vw, 12rem);
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-align: center;
+  /* Gold gradient clipped to the letters */
+  background: linear-gradient(180deg, #fff1a8 0%, #f5c542 40%, #d4a017 60%, #a87400 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: #d4a017; /* fallback if background-clip: text is unsupported */
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.35));
+}

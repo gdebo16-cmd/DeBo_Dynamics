@@ -16,6 +16,7 @@ const Nav = ({className}: NavProps) => {
         { name: 'Home', path: '/' },
         { name: 'Resume', path: '/resume' },
         { name: 'Portfolio', path: '/portfolio' },
+        { name: 'Vision', path: '/vision' },
 ];
   return (
     <nav className={className}>

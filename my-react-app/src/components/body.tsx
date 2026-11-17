@@ -7,12 +7,11 @@ interface BodyProps {
     className?: string;
 }
 const Body = ({className}: BodyProps) => {
-    // TODO(human): give each tile a `path` matching a route in app.tsx
-    // ('/', '/resume', '/portfolio'). Portfolio is done as an example.
+    // Paths match the routes in app.tsx and the links in nav.tsx.
     const content_tile = [
         { title: "Portfolio", description: "Showcase of our work", image: FighterImg, path: "/portfolio" },
-        { title: "Experience", description: "Our mission and values", image: CyberImg, path: "" },
-        { title: "Vision", description: "Our vision for the future", image: ProjectsImg, path: "" },
+        { title: "Experience", description: "Our mission and values", image: CyberImg, path: "/resume" },
+        { title: "Vision", description: "Our vision for the future", image: ProjectsImg, path: "/vision" },
     ];
 
     return (
