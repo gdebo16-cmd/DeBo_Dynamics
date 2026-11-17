@@ -17,6 +17,11 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
 
     useEffect(() => {
         document.documentElement.setAttribute('data-theme', theme);
+        // Keep the browser's bar color in sync with the theme (read from --page-bg in style.css)
+        const pageBg = getComputedStyle(document.documentElement).getPropertyValue('--page-bg').trim();
+        if (pageBg) {
+            document.querySelector('meta[name="theme-color"]')?.setAttribute('content', pageBg);
+        }
     }, [theme]);
     
 
