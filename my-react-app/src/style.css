@@ -252,6 +252,10 @@ footer {
   width: 100%;
   box-shadow: var(--box-shadow);
   background: var(--background-color);
+  /* Solid layer under the gradient: Safari's bottom toolbar takes its
+     tint from a fixed bottom element's background-color, and a gradient
+     alone gives it nothing to read. */
+  background-color: var(--page-bg);
   -webkit-backdrop-filter: blur(15px);
   backdrop-filter: blur(15px);
   color: var(--color);
@@ -480,7 +484,9 @@ footer {
   .adapt-item {
     /* Pin to the footer and give the 2:1 animation a real size */
     top: auto;
-    bottom: 18px;
+    /* The pill is drawn above the middle of its 2:1 frame, so sit lower
+       to line its center up with the menu button */
+    bottom: 7px;
     left: 10px;
     width: 96px;
     height: auto;
