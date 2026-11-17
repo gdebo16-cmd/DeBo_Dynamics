@@ -5,7 +5,23 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#8aa7ff" />
-    <style>html { background-color: #8aa7ff; }</style>
+    <script>
+      // Apply the saved theme before the first paint. iPhone Safari picks
+      // its toolbar colors at load, so they must be right from the start.
+      // Colors mirror --page-bg in src/style.css; keep the two in sync.
+      (function () {
+        var colors = { Light: '#8aa7ff', Dark: '#000000', Forest: '#09051a', Ocean: '#456aa4', Hot: '#0f092a' };
+        var theme = 'Light';
+        try {
+          var saved = localStorage.getItem('theme');
+          if (saved && colors[saved]) theme = saved;
+        } catch (e) {}
+        var root = document.documentElement;
+        root.setAttribute('data-theme', theme);
+        root.style.backgroundColor = colors[theme];
+        document.querySelector('meta[name="theme-color"]').setAttribute('content', colors[theme]);
+      })();
+    </script>
     <title>DeBo Dynamics</title>
   </head>
   <body>
