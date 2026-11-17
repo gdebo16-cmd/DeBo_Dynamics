@@ -8,8 +8,14 @@
 [data-theme="Ocean"]  { --page-bg: #456aa4; }
 [data-theme="Hot"]    { --page-bg: #0f092a; }
 
-html {
+html,
+body {
+  /* Safari's bottom toolbar samples body, so it needs the color too */
   background-color: var(--page-bg);
+}
+
+body {
+  min-height: 100dvh;
 }
 
 main {
@@ -472,10 +478,13 @@ footer {
   }
 
   .adapt-item {
-    top: 90dvh;
-    height: 10%;
-    width: 18;
-    left: 2%;
-      z-index: 10000;
+    /* Pin to the footer and give the 2:1 animation a real size */
+    top: auto;
+    bottom: 18px;
+    left: 10px;
+    width: 96px;
+    height: auto;
+    padding: 0;
+    z-index: 10000;
   }
 }
