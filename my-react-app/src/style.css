@@ -180,7 +180,7 @@ footer {
   justify-content: center;
   padding: 0;
   margin: 2% 2% 0 2%;
-  background: var(--background-color);
+  background: none;
   box-shadow: var(--box-shadow);
   border-radius: 10px;
   -webkit-backdrop-filter: blur(15px);
