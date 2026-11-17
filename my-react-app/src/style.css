@@ -8,14 +8,11 @@
 [data-theme="Ocean"]  { --page-bg: #456aa4; }
 [data-theme="Hot"]    { --page-bg: #0f092a; }
 
-html,
-body {
-  /* Safari's bottom toolbar samples body, so it needs the color too */
+/* Only html gets the color. A background on body would paint over the
+   Lottie background, which sits behind it at z-index: -1. Safari's
+   bottom toolbar reads the footer's background-color instead. */
+html {
   background-color: var(--page-bg);
-}
-
-body {
-  min-height: 100dvh;
 }
 
 main {
@@ -189,6 +186,7 @@ footer {
   margin: 16px 12px;
   font-size: clamp(1.5rem, 6vw, 2.5rem);
   line-height: 1.2;
+  text-align: center;
   padding: 10px 14px;
   border-radius: 10px;
   -webkit-backdrop-filter: blur(15px);
@@ -244,6 +242,7 @@ footer {
 
 .tile-title {
   flex: 1 1 0;
+  text-align: center;
 }
 
 footer {
