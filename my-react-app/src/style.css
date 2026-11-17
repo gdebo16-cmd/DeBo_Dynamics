@@ -160,7 +160,7 @@ footer {
     border: var(--border-1);
     color: var(--color);
   width: auto;
-  height: 10%;
+  height: 6%;
   padding: 10px;
   border-radius: 10px;
   backdrop-filter: blur(15px);
@@ -175,7 +175,6 @@ footer {
   margin: 0;
   width: auto;
   height: 80%;
-  border: 2px solid red;
   
 }
 
@@ -187,6 +186,7 @@ footer {
 
   display: flex;
   flex-direction: column;
+  text-decoration: none; /* tiles are links now; drop the underline */
   height: auto;
   margin: 10px 10px 10px 10px;
   padding: 0;
@@ -207,6 +207,7 @@ footer {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  object-fit: cover;
   border-radius: 10px 10px 0 0;
   flex: 5 1 0;
 }
@@ -391,11 +392,10 @@ footer {
     position: sticky;
     top: -5px;
     z-index: 10;
+    height: 6%;
   }
 
-  .tile-list {
-    
-  }
+
 
   .banner-img {
     height: 10.2dvh;
@@ -427,8 +427,16 @@ footer {
     display: none;
   }
 
-  .tile-image {
+  .tile-button { 
     width: 80dvw;
+    height: 40dvh;
+    padding-bottom: 1%;
+   }
+  
+
+  .tile-image {
+    width: 100%;
+    height: 30dvh;
   }
 
   .adapt-button {
